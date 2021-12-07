@@ -15,7 +15,10 @@ body {
   font-size: 3.125rem;
   font-weight: bold;
   color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 4rem;
+  margin-bottom: 4rem;
 }
 
 .container {
