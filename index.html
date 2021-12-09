@@ -10,19 +10,37 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
+    <div class="layer"></div>
+    <form action="https://formsubmit.co/atunguye25@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false" />
+      <input
+        type="hidden"
+        name="_next"
+        value="https://ngatu.github.io/thankyou.html"
+      />
+      <div class="cancel"></div>
+      <p class="form-info">Your Name</p>
+      <input type="text" name="name" required />
+      <p class="form-info">Your Email</p>
+      <input type="email" name="email" required />
+      <p class="form-info">How can I help?</p>
+      <input type="text" name="message" required />
+      <button type="submit">Send</button>
+    </form>
     <div class="head">Tu Nguyen</div>
     <div class="container">
       <div class="intro">
         <h1>Hi, I'm Tu</h1>
         <h2>A Newbie Programmer</h2>
         <div class="intro-text">
-          <p>I’m currently studying A.I,</p>
-          <p>but I’m also looking forward to</p>
+          <p>I'm currently studying A.I,</p>
+          <p>but I'm also looking forward to</p>
           <p>exploring new stuff in programming.</p>
         </div>
-        <button>
+        <button class="contact">
           <div>Contact Me</div>
           <img src="img/arrow.png" />
         </button>
@@ -68,4 +86,5 @@
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

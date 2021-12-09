@@ -1,0 +1,125 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(
+      63.72deg,
+      rgba(238, 178, 255, 0.188) 8.02%,
+      rgba(81, 117, 255, 0.2) 54.6%,
+      rgba(255, 255, 255, 0.2) 97.46%
+    ),
+    linear-gradient(
+      116.7deg,
+      #8e9bff 1.76%,
+      rgba(238, 178, 255, 0.94) 81.64%,
+      #ffb6ff 97.62%
+    );
+  background-repeat: no-repeat;
+}
+
+.container {
+  /*Center this*/
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circle,
+.circle-border {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.circle {
+  z-index: 1;
+  position: relative;
+  background: transparent;
+  transform: scale(1);
+  animation: success-anim 700ms ease;
+}
+.circle-border {
+  z-index: 0;
+  position: absolute;
+  background: transparent;
+  border: 3px solid #8f6;
+  transform: scale(1);
+  animation: circle-anim 400ms ease;
+}
+
+@keyframes success-anim {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle-anim {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.success::before,
+.success::after {
+  content: '';
+  display: block;
+  height: 4px;
+  background: #8f6;
+  position: absolute;
+}
+
+.success::before {
+  width: 17px;
+  top: 60%;
+  left: 30%;
+  transform: rotateZ(41deg);
+}
+
+.success::after {
+  width: 30px;
+  top: 50%;
+  left: 42%;
+  transform: rotateZ(-50deg);
+}
+
+button {
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.75rem;
+  font-weight: bold;
+  box-sizing: border-box;
+  margin-top: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button div {
+  margin: 0 0.75rem 0 0.5rem;
+  background-image: linear-gradient(80deg, #8e9bff, #ffb6ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
