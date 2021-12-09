@@ -345,6 +345,16 @@ form button:active {
           justify-content: space-evenly;
 }
 
+.links a {
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.links a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 @media screen and (max-width: 812px) {
   body {
     width: 100%;
