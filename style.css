@@ -1,11 +1,24 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  width: 100vw;
-  height: 120vh;
+* {
   margin: 0;
-  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(63.72deg, rgba(238, 178, 255, 0.188) 8.02%, rgba(81, 117, 255, 0.2) 54.6%, rgba(255, 255, 255, 0.2) 97.46%), linear-gradient(116.7deg, #8e9bff 1.76%, rgba(238, 178, 255, 0.94) 81.64%, #ffb6ff 97.62%);
+  background: linear-gradient(
+      63.72deg,
+      rgba(238, 178, 255, 0.188) 8.02%,
+      rgba(81, 117, 255, 0.2) 54.6%,
+      rgba(255, 255, 255, 0.2) 97.46%
+    ),
+    linear-gradient(
+      116.7deg,
+      #8e9bff 1.76%,
+      rgba(238, 178, 255, 0.94) 81.64%,
+      #ffb6ff 97.62%
+    );
   background-repeat: no-repeat;
 }
 
@@ -21,19 +34,24 @@ body {
   z-index: 1;
 }
 
+.container {
+  width: 80%;
+  margin-inline: auto;
+}
+
 form {
   display: none;
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 40vw;
   background: #ffffff;
   border-radius: 15px;
   z-index: 2;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 3.5rem 1.75rem 0;
 }
 
@@ -47,24 +65,29 @@ form .cancel {
   border: 4px solid red;
   border-radius: 50%;
   cursor: pointer;
-  -webkit-transition: opacity 200ms ease-in-out, -webkit-box-shadow 200ms ease-out, -webkit-transform 200ms ease-out;
-  transition: opacity 200ms ease-in-out, -webkit-box-shadow 200ms ease-out, -webkit-transform 200ms ease-out;
-  transition: box-shadow 200ms ease-out, transform 200ms ease-out, opacity 200ms ease-in-out;
-  transition: box-shadow 200ms ease-out, transform 200ms ease-out, opacity 200ms ease-in-out, -webkit-box-shadow 200ms ease-out, -webkit-transform 200ms ease-out;
+  -webkit-transition: opacity 200ms ease-in-out,
+    -webkit-box-shadow 200ms ease-out, -webkit-transform 200ms ease-out;
+  transition: opacity 200ms ease-in-out, -webkit-box-shadow 200ms ease-out,
+    -webkit-transform 200ms ease-out;
+  transition: box-shadow 200ms ease-out, transform 200ms ease-out,
+    opacity 200ms ease-in-out;
+  transition: box-shadow 200ms ease-out, transform 200ms ease-out,
+    opacity 200ms ease-in-out, -webkit-box-shadow 200ms ease-out,
+    -webkit-transform 200ms ease-out;
 }
 
 form .cancel:after {
   width: 24px;
   height: 4px;
   background-color: red;
-  content: '';
+  content: "";
   left: 50%;
   top: 50%;
   margin-left: -12px;
   margin-top: -2px;
   position: absolute;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 form .cancel:before {
@@ -75,34 +98,35 @@ form .cancel:before {
   width: 24px;
   height: 4px;
   background-color: red;
-  content: '';
+  content: "";
   position: absolute;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-form .cancel:after, form .cancel:before {
+form .cancel:after,
+form .cancel:before {
   -webkit-transition: 400ms linear;
   transition: 400ms linear;
 }
 
 form .cancel:hover {
   -webkit-box-shadow: 0px 0px 0px 20px red inset;
-          box-shadow: 0px 0px 0px 20px red inset;
+  box-shadow: 0px 0px 0px 20px red inset;
   -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 form .cancel:hover:after {
   background-color: #fff;
   -webkit-transform: rotate(-45deg) scale(0.6);
-          transform: rotate(-45deg) scale(0.6);
+  transform: rotate(-45deg) scale(0.6);
 }
 
 form .cancel:hover:before {
   background-color: #fff;
   -webkit-transform: rotate(45deg) scale(0.6);
-          transform: rotate(45deg) scale(0.6);
+  transform: rotate(45deg) scale(0.6);
 }
 
 form p {
@@ -117,7 +141,7 @@ form input {
   border: 1px solid black;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0.75rem;
 }
 
@@ -141,41 +165,26 @@ form button {
 
 form button:active {
   -webkit-transform: translateY(2px);
-          transform: translateY(2px);
+  transform: translateY(2px);
 }
 
-.head {
-  width: 100%;
+header {
   height: 10%;
   font-size: 3.125rem;
   font-weight: bold;
   color: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 4rem;
-  margin-bottom: 4rem;
+  padding-block: 6rem;
 }
 
-.container {
-  width: 95%;
-  margin: 0 auto;
-  display: -ms-grid;
+main {
   display: grid;
-      grid-template-areas: 'links intro info';
-  -ms-grid-columns: 3rem 37rem 26rem;
-      grid-template-columns: 3rem 37rem 26rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-columns: 1fr 4fr 2fr;
+  align-items: center;
+  gap: 2rem;
 }
 
 .intro {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: intro;
+  grid-column: 2 / 3;
 }
 
 .intro h1 {
@@ -197,8 +206,8 @@ form button:active {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 3rem;
   font-size: 1.25rem;
 }
@@ -218,11 +227,11 @@ form button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
 }
@@ -230,7 +239,7 @@ form button:active {
 .intro button:hover {
   cursor: pointer;
   -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .intro button div {
@@ -242,9 +251,7 @@ form button:active {
 }
 
 .info {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: info;
+  grid-column: 3 / 4;
 }
 
 .card {
@@ -252,7 +259,7 @@ form button:active {
   position: relative;
   font-size: 1.125rem;
   -webkit-filter: drop-shadow(6px 6px 16px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(6px 6px 16px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(6px 6px 16px rgba(0, 0, 0, 0.25));
 }
 
 .card .circle {
@@ -286,13 +293,13 @@ form button:active {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 1.125rem;
 }
 
@@ -301,8 +308,8 @@ form button:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .card-content-text img {
@@ -324,25 +331,17 @@ form button:active {
   text-align: right;
   color: #5c5c5c;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 1.25rem;
 }
 
 .links {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: links;
+  grid-column: 1 / 2;
+  grid-row: 1 / span 1;
   height: 15.625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .links a {
@@ -352,7 +351,7 @@ form button:active {
 
 .links a:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 812px) {
@@ -381,9 +380,12 @@ form button:active {
     height: 1.75rem;
   }
   .container {
-        grid-template-areas: 'intro' 'info' 'links';
+    grid-template-areas:
+      "intro"
+      "info"
+      "links";
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .intro h1 {
     font-size: 3.1875rem;
@@ -395,8 +397,8 @@ form button:active {
   }
   .intro-text {
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     font-size: 1rem;
   }
   .intro button {
@@ -429,7 +431,7 @@ form button:active {
   }
   .card-content {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding: 2.1875rem 0.875rem;
   }
   .card-content img {
@@ -444,8 +446,8 @@ form button:active {
   .links {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     height: 3.125rem;
     margin: 5rem 0 3rem;
   }
