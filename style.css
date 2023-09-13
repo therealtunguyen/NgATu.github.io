@@ -203,6 +203,10 @@ main {
   margin: 0.75rem 0;
 }
 
+.intro p {
+  max-width: 50%;
+}
+
 .intro-text {
   display: -webkit-box;
   display: -ms-flexbox;
