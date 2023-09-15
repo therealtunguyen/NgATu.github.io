@@ -22,24 +22,29 @@
         value="https://ngatu.github.io/thankyou.html"
       />
       <div class="cancel"></div>
-      <p class="form-info">Your Name</p>
-      <input type="text" name="name" required />
-      <p class="form-info">Your Email</p>
-      <input type="email" name="email" required />
-      <p class="form-info">How can I help?</p>
-      <input type="text" name="message" required />
+      <div class="form-item">
+        <p class="form-info">Your Name</p>
+        <input type="text" name="name" required />
+      </div>
+      <div class="form-item">
+        <p class="form-info">Your Email</p>
+        <input type="email" name="email" required />
+      </div>
+      <div class="form-item">
+        <p class="form-info">How can I help?</p>
+        <input type="text" name="message" required />
+      </div>
       <button type="submit">Send</button>
     </form>
-    <div class="head">Tu Nguyen</div>
-    <div class="container">
+    <header class="container">Tu Nguyen</header>
+    <main class="container">
       <div class="intro">
         <h1>Hi, I'm Tu</h1>
         <h2>A Newbie Programmer</h2>
-        <div class="intro-text">
-          <p>I'm currently studying A.I,</p>
-          <p>but I'm also looking forward to</p>
-          <p>exploring new stuff in programming.</p>
-        </div>
+        <p>
+          I'm currently studying A.I, but I'm also looking forward to exploring
+          new stuff in programming.
+        </p>
         <button class="contact">
           <div>Contact Me</div>
           <img src="img/arrow.png" />
@@ -84,7 +89,7 @@
           <img src="img/insta-icon.png" />
         </a>
       </div>
-    </div>
+    </main>
   </body>
   <script src="script.js"></script>
 </html>
